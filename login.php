@@ -19,6 +19,9 @@ class User
         } catch (PDOException $e) {
             die($e->getMessage());
         }
+        catch (PDOException $e) {
+            die($e->getMessage());
+        }
     }
 
     public function create($username, $password)
