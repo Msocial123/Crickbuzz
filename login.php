@@ -46,6 +46,11 @@ class User
         $statement = $this->dbh->prepare(
             'SELECT * from '.$this->usersTableName.' where username = :username'
         );
+        public function exists($username, $password)
+    {
+        $statement = $this->dbh->prepare(
+            'SELECT * from '.$this->usersTableName.' where username = :username'
+        );
 
         if (false === $statement) {
             throw new Exception('Invalid prepare statement');
